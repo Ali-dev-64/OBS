@@ -1,15 +1,16 @@
 import classes
-import random
+import create_new_account
+End = False
 
+def Run():
+    global End  
+    command = input("Enter a command: \n")
+    
+    if command == "a -new":
+        create_new_account.Create_account()
+        
+    if command == "-q" or command == "-e":
+        End = True
 
-
-
-
-
-def generate_account_number():
-    return random.randint(10**11, (10**12)-1)
-
-random_number = generate_random_12_digit_number()
-print(random_number)
-
-	
+while not End:
+    Run()
