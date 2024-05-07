@@ -46,5 +46,5 @@ def Create_account():
 	account_issue_date , account_expiry_date = issue_and_expiry_date()
 	account= accounts.Account(account_name,account_number,account_pin,user_email,user_phone_number,country, account_issue_date , account_expiry_date)
 	print(f"Welcome {account_name}! You have a new Bank account under the name of {account_name} other info is down \n Account Number: {account_number} \n Pin: {account_pin} \n Issue Date: {account_issue_date} \n Expiry Date: {account_expiry_date}")	
-
+	account.Add_To_database()
 

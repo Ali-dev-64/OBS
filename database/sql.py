@@ -4,7 +4,7 @@ conn = sqlite3.connect('accounts_data.db')
 
 c = conn.cursor()
 
-c.execute('''CREATE TABLE IF NOT EXISTS Accounts (
+c.execute('''CREATE TABLE Accounts (
                 account_number INTEGER PRIMARY KEY,  
                 account_name TEXT ,
                 account_pin INTEGER,
