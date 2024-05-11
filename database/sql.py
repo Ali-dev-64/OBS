@@ -1,6 +1,6 @@
 import sqlite3
 
-<<<<<<< HEAD
+
 # Connect to the SQLite database
 con = sqlite3.connect("accounts_data.db")
 cursor = con.cursor()
@@ -19,7 +19,7 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS Accounts (
 
 # Commit the changes
 con.commit()
-=======
+
 conn = sqlite3.connect('accounts_data.db')
 
 c = conn.cursor()
@@ -35,4 +35,4 @@ c.execute('''CREATE TABLE Accounts (
                 account_expiry_date INTEGER 
 
             )''')
->>>>>>> ff3ac349616680fb695c8414fdef2a381ac99953
+

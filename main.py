@@ -1,9 +1,5 @@
 import accounts
-<<<<<<< HEAD
 
-=======
-import create_new_account
->>>>>>> ff3ac349616680fb695c8414fdef2a381ac99953
 End = False
 
 def Run():
@@ -16,5 +12,9 @@ def Run():
 		End = True
 	if command=="show":
 		account.show_info()
-while not End:
-	Run()
+
+
+
+if __name__ == '__main__':
+	while not End:
+		Run()
