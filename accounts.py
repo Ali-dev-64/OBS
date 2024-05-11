@@ -1,4 +1,5 @@
 import sqlite3
+<<<<<<< HEAD
 import random
 import re
 import accounts
@@ -60,6 +61,23 @@ class Account():
 		self.account = self.Add_To_database()
 		print(f"Welcome {self.account_name}! You have a new Bank account under the name of {self.account_name} other info is down \n Account Number: {self.account_number} \n Pin: {self.account_pin} \n Issue Date: {self.account_issue_date} \n Expiry Date: {self.account_expiry_date}") 
 
+=======
+
+class Account():
+	def __init__(self,account_name,account_number,account_pin,user_email,user_phone_number,country, account_issue_date , account_expiry_date):
+		
+		self.con = sqlite3.connect("database/accounts_data.db")
+		self.cursor = self.con.cursor()
+		self.account_name=account_name
+		self.account_number=account_number
+		self.account_pin=account_pin
+		self.user_email=user_email
+		self.user_phone_number=user_phone_number
+		self.country=country
+		self.account_issue_date=account_issue_date
+		self.account_expiry_date=account_expiry_date
+		
+>>>>>>> ff3ac349616680fb695c8414fdef2a381ac99953
 	def Add_To_database(self):
 		self.cursor.execute(f'''INSERT INTO Accounts (
                 account_number,  
@@ -74,12 +92,17 @@ class Account():
                 {self.account_number},
                 '{self.account_name}',
                 {self.account_pin},
+<<<<<<< HEAD
                 '{self.user_email_address}',
+=======
+                '{self.user_email}',
+>>>>>>> ff3ac349616680fb695c8414fdef2a381ac99953
                 {self.user_phone_number},
                 '{self.country}',
                 {self.account_issue_date},
                 {self.account_expiry_date}
                 )''')
+<<<<<<< HEAD
 		self.con.commit()
 
 				
@@ -97,3 +120,13 @@ class Account():
         #        # Print other details as needed
 		#else:
 		#	print("Account not found.")
+=======
+
+				
+
+
+	def show_info(self):
+		account_number=input("Enter Your Account number: \n")
+		account_pin=input("Enter Pin: \n")
+		
+>>>>>>> ff3ac349616680fb695c8414fdef2a381ac99953

@@ -1,3 +1,4 @@
+
 def get_integer_input(prompt):
     while True:
         try:
@@ -6,6 +7,4 @@ def get_integer_input(prompt):
         except ValueError:
             print("Invalid input. Please enter an integer.")
 
-# Test the function
-age = get_integer_input("Please enter your age: ")
-print("Your age is:", age)
+age=get_integer_input("Please enter your age: ")
